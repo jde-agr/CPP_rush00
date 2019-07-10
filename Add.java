@@ -6,6 +6,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.AbstractButton;
+import java.lang.Integer;
 
 public class Add {
     public static void main(String[] args) {
@@ -39,5 +40,10 @@ class Addition extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         System.out.println("Pressed");
+        int num1 = Integer.parseInt(t1.getText());
+        int num2 = Integer.parseInt(t2.getText());
+
+        int value = num1 + num2;
+        l.setText(value + "");
     }
 }
