@@ -44,15 +44,25 @@ class Addition extends JFrame {
         // };
 
         // Passing object directly as it's only used once
-        b.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-                System.out.println("Pressed");
-                int num1 = Integer.parseInt(t1.getText());
-                int num2 = Integer.parseInt(t2.getText());
+        // b.addActionListener(new ActionListener() {
+        //     public void actionPerformed(ActionEvent ae) {
+        //         System.out.println("Pressed");
+        //         int num1 = Integer.parseInt(t1.getText());
+        //         int num2 = Integer.parseInt(t2.getText());
 
-                int value = num1 + num2;
-                l.setText(value + "");
-            }
+        //         int value = num1 + num2;
+        //         l.setText(value + "");
+        //     }
+        // });
+
+        // If we know method only takes accepts parameter, or only one method, we call it Boiler Plate code
+        b.addActionListener(ae -> {
+            System.out.println("Pressed");
+            int num1 = Integer.parseInt(t1.getText());
+            int num2 = Integer.parseInt(t2.getText());
+
+            int value = num1 + num2;
+            l.setText(value + "");
         });
 
         setLayout(new FlowLayout());
